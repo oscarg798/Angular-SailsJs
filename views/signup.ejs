@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="SignupModule" ng-controller="SignupController">
 	<head>
 		<title>Registro De Usarios</title>
 		<!--STYLES-->
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="/styles/importer.css">
 		<!--STYLES END-->
 	</head>
-	<body ng-app="SignupModule" ng-controller="SignupController">
+	<body  >
 		<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -56,11 +56,13 @@
 		<!--SCRIPTS-->
 		<script src="/js/dependencies/sails.io.js"></script>
 		<script src="/js/dependencies/angular.1.3.js"></script>
+		<script src="/js/dependencies/angularRoutes.js"></script>
+		<script src="/js/dependencies/bower.js"></script>
 		<script src="/js/public/signup/SignupModule.js"></script>
 		<script src="/js/public/signup/SingupController.js"></script>
+		<script src="/js/public/signup/SingupServices.js"></script>
 		<script src="/js/bootstrap.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/npm.js"></script>
 		<!--SCRIPTS END-->
 	</body>
 </html>

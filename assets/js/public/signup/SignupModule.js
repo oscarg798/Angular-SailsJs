@@ -1,1 +1,2 @@
-angular.module('SignupModule', ['SignupModule.controllers']);
+
+angular.module('SignupModule', []);

@@ -1,25 +1,30 @@
-angular.module('SignupModule.controllers', []).controller('SignupController', ['$scope', '$http',
-    function($scope, $http) {
-        $scope.user = {
+angular.module('SignupModule').controller('SignupController', ['$scope', 'SignupService',
 
-        }
+    function($scope, SignupService) {
+
 
         $scope.signupFormSubmit = function() {
-            
-            $http.post('/signup', {
+
+            var data = {
                 name: $scope.user.name,
                 username: $scope.user.username,
                 email: $scope.user.email,
                 password: $scope.user.password
-            }).then(function onSuccess() {
+            };
+
+            SignupService.createUser(data).success(function(chuck, status) {
                 // body...
+                alert(JSON.stringify(chuck));
                 window.location = '/user';
-            }).catch(function onError(sailsResponse) {
+            }).catch(function(err) {
                 // body...
-                console.log(sailsResponse);
-            }).finally(function anyWay() {
-               console.log('Intente Registrar')
+                alert(JSON.stringify(err));
+                console.log(JSON.stringify(err));
+            }).finally(function() {
+                // body...
+                console.log('Intente Crear');
             });
+
 
         }
     }
