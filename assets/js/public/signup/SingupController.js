@@ -14,11 +14,11 @@ angular.module('SignupModule').controller('SignupController', ['$scope', 'Signup
 
             SignupService.createUser(data).success(function(chuck, status) {
                 // body...
-                alert(JSON.stringify(chuck));
+                alert('Exito ' + JSON.stringify(chuck));
                 window.location = '/user';
             }).catch(function(err) {
                 // body...
-                alert(JSON.stringify(err));
+                alert('Error ' +JSON.stringify(err));
                 console.log(JSON.stringify(err));
             }).finally(function() {
                 // body...
